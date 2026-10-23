@@ -1,0 +1,24 @@
+# As checagens da home a cada push na main e a cada pull request. O resultado é insumo: a cópia que vale é a do servidor,
+# que as roda antes de publicar.
+name: checagens
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# Declarar as permissões zera as que não estão aqui.
+permissions:
+  contents: read
+
+jobs:
+  checagens:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Checagens
+        run: python3 -I checagens/checa-home.py site
