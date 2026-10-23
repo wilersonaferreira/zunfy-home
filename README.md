@@ -6,6 +6,10 @@ A home de [zunfy.com.br](https://zunfy.com.br).
 
 Só o diretório `site/`: a página, o estilo, o script e as fontes. O resto do repositório não é publicado.
 
+## A versão no ar
+
+O servidor grava, em cada versão que publica, um `versao.txt` com o commit e a hora da publicação: [zunfy.com.br/versao.txt](https://zunfy.com.br/versao.txt) mostra o que está no ar.
+
 ## As checagens
 
 `checagens/checa-home.py` é uma cópia das checagens que o servidor roda antes de publicar. Para conferir o `site/` antes de um commit, da raiz do repositório:
